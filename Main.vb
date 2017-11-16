@@ -1,12 +1,32 @@
-﻿Public Class Main
+﻿Public Class Form1
+    Dim alpha As Int16 ' <---  number between 0 (totally transparent) and 255 (totally opaque)
+    Dim panelName As String
+
     Private Sub InfoBtn_Click(sender As Object, e As EventArgs) Handles InfoBtn.Click
+        If MainPnl.Visible = True Then
+            panelName = MainPnl.Name
+
+        ElseIf BotPnl.Visible = True Then
+            panelName = BotPnl.Name
+
+        ElseIf QueuePnl.Visible = True Then
+            panelName = QueuePnl.Name
+        End If
         InfoPnl.Visible = True
         MainPnl.Visible = False
     End Sub
 
     Private Sub InfoBackBtn_Click(sender As Object, e As EventArgs) Handles InfoBackBtn.Click
-        InfoPnl.Visible = False
-        MainPnl.Visible = True
+        If panelName = MainPnl.Name Then
+            InfoPnl.Visible = False
+            MainPnl.Visible = True
+        ElseIf panelName = BotPnl.Name Then
+            InfoPnl.Visible = False
+            BotPnl.Visible = True
+        ElseIf panelName = QueuePnl.Name Then
+            InfoPnl.Visible = False
+            QueuePnl.Visible = True
+        End If
     End Sub
 
     Private Sub BotBtn_Click(sender As Object, e As EventArgs) Handles BotBtn.Click
@@ -50,4 +70,15 @@
     Private Sub CameraImg_GiveFeedback(sender As Object, e As GiveFeedbackEventArgs) Handles CameraImg.GiveFeedback
 
     End Sub
+
+    'Private Sub InfoLbl_Click(sender As Object, e As EventArgs) Handles InfoBtn.Click
+    '    panelName = 
+    'End Sub
+
+
+
+    'Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick, InfoBtn.VisibleChanged
+    '    alpha = 60
+    '    InfoBtn.BackColor = Color.Black
+    'End Sub
 End Class
