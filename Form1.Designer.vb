@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,16 +20,24 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MainPnl = New System.Windows.Forms.Panel()
-        Me.InfoBtn = New System.Windows.Forms.Button()
         Me.BotBtn = New System.Windows.Forms.Button()
+        Me.InfoBtn = New System.Windows.Forms.Button()
         Me.InfoPnl = New System.Windows.Forms.Panel()
         Me.InfoBackBtn = New System.Windows.Forms.Button()
         Me.InfoLbl = New System.Windows.Forms.Label()
         Me.BotPnl = New System.Windows.Forms.Panel()
+        Me.ElephantBtn = New System.Windows.Forms.Button()
+        Me.ZebraBtn = New System.Windows.Forms.Button()
+        Me.HippoBtn = New System.Windows.Forms.Button()
         Me.PenguinBtn = New System.Windows.Forms.Button()
+        Me.CamelBtn = New System.Windows.Forms.Button()
+        Me.BearBtn = New System.Windows.Forms.Button()
+        Me.GorillaBtn = New System.Windows.Forms.Button()
+        Me.LionBtn = New System.Windows.Forms.Button()
         Me.TigerBtn = New System.Windows.Forms.Button()
         Me.BotBackBtn = New System.Windows.Forms.Button()
         Me.QueuePnl = New System.Windows.Forms.Panel()
@@ -54,39 +62,32 @@ Partial Class Form1
         'MainPnl
         '
         Me.MainPnl.Controls.Add(Me.BotBtn)
+        Me.MainPnl.Controls.Add(Me.InfoBtn)
         Me.MainPnl.Location = New System.Drawing.Point(6, 6)
         Me.MainPnl.Margin = New System.Windows.Forms.Padding(2)
         Me.MainPnl.Name = "MainPnl"
         Me.MainPnl.Size = New System.Drawing.Size(615, 483)
         Me.MainPnl.TabIndex = 0
         '
-        'InfoBtn
-        '
-        Me.InfoBtn.BackColor = System.Drawing.Color.Transparent
-        Me.InfoBtn.BackgroundImage = Global.TourBot.My.Resources.Resources._1828608
-        Me.InfoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.InfoBtn.FlatAppearance.BorderSize = 0
-        Me.InfoBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.InfoBtn.ForeColor = System.Drawing.Color.Black
-        Me.InfoBtn.Location = New System.Drawing.Point(486, 321)
-        Me.InfoBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.InfoBtn.Name = "InfoBtn"
-        Me.InfoBtn.Size = New System.Drawing.Size(130, 162)
-        Me.InfoBtn.TabIndex = 0
-        Me.InfoBtn.Text = "Need help?"
-        Me.InfoBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.InfoBtn.UseVisualStyleBackColor = False
-        '
         'BotBtn
         '
-        Me.BotBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BotBtn.Location = New System.Drawing.Point(135, 174)
+        Me.BotBtn.Location = New System.Drawing.Point(144, 265)
         Me.BotBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.BotBtn.Name = "BotBtn"
-        Me.BotBtn.Size = New System.Drawing.Size(310, 176)
+        Me.BotBtn.Size = New System.Drawing.Size(123, 109)
         Me.BotBtn.TabIndex = 1
         Me.BotBtn.Text = "See Bots"
         Me.BotBtn.UseVisualStyleBackColor = True
+        '
+        'InfoBtn
+        '
+        Me.InfoBtn.Location = New System.Drawing.Point(428, 317)
+        Me.InfoBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.InfoBtn.Name = "InfoBtn"
+        Me.InfoBtn.Size = New System.Drawing.Size(107, 71)
+        Me.InfoBtn.TabIndex = 0
+        Me.InfoBtn.Text = "Info"
+        Me.InfoBtn.UseVisualStyleBackColor = True
         '
         'InfoPnl
         '
@@ -112,15 +113,23 @@ Partial Class Form1
         'InfoLbl
         '
         Me.InfoLbl.AutoSize = True
-        Me.InfoLbl.Location = New System.Drawing.Point(13, 105)
+        Me.InfoLbl.Location = New System.Drawing.Point(115, 92)
         Me.InfoLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.InfoLbl.Name = "InfoLbl"
-        Me.InfoLbl.Size = New System.Drawing.Size(0, 13)
+        Me.InfoLbl.Size = New System.Drawing.Size(39, 13)
         Me.InfoLbl.TabIndex = 0
+        Me.InfoLbl.Text = "InfoLbl"
         '
         'BotPnl
         '
+        Me.BotPnl.Controls.Add(Me.ElephantBtn)
+        Me.BotPnl.Controls.Add(Me.ZebraBtn)
+        Me.BotPnl.Controls.Add(Me.HippoBtn)
         Me.BotPnl.Controls.Add(Me.PenguinBtn)
+        Me.BotPnl.Controls.Add(Me.CamelBtn)
+        Me.BotPnl.Controls.Add(Me.BearBtn)
+        Me.BotPnl.Controls.Add(Me.GorillaBtn)
+        Me.BotPnl.Controls.Add(Me.LionBtn)
         Me.BotPnl.Controls.Add(Me.TigerBtn)
         Me.BotPnl.Controls.Add(Me.BotBackBtn)
         Me.BotPnl.Location = New System.Drawing.Point(6, 6)
@@ -130,25 +139,113 @@ Partial Class Form1
         Me.BotPnl.TabIndex = 1
         Me.BotPnl.Visible = False
         '
+        'ElephantBtn
+        '
+        Me.ElephantBtn.BackColor = System.Drawing.Color.White
+        Me.ElephantBtn.BackgroundImage = CType(resources.GetObject("ElephantBtn.BackgroundImage"), System.Drawing.Image)
+        Me.ElephantBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ElephantBtn.Location = New System.Drawing.Point(366, 155)
+        Me.ElephantBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.ElephantBtn.Name = "ElephantBtn"
+        Me.ElephantBtn.Size = New System.Drawing.Size(120, 68)
+        Me.ElephantBtn.TabIndex = 11
+        Me.ElephantBtn.UseVisualStyleBackColor = False
+        '
+        'ZebraBtn
+        '
+        Me.ZebraBtn.BackColor = System.Drawing.Color.White
+        Me.ZebraBtn.BackgroundImage = CType(resources.GetObject("ZebraBtn.BackgroundImage"), System.Drawing.Image)
+        Me.ZebraBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ZebraBtn.Location = New System.Drawing.Point(366, 299)
+        Me.ZebraBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.ZebraBtn.Name = "ZebraBtn"
+        Me.ZebraBtn.Size = New System.Drawing.Size(120, 68)
+        Me.ZebraBtn.TabIndex = 10
+        Me.ZebraBtn.UseVisualStyleBackColor = False
+        '
+        'HippoBtn
+        '
+        Me.HippoBtn.BackColor = System.Drawing.Color.White
+        Me.HippoBtn.BackgroundImage = CType(resources.GetObject("HippoBtn.BackgroundImage"), System.Drawing.Image)
+        Me.HippoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.HippoBtn.Location = New System.Drawing.Point(242, 227)
+        Me.HippoBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.HippoBtn.Name = "HippoBtn"
+        Me.HippoBtn.Size = New System.Drawing.Size(120, 68)
+        Me.HippoBtn.TabIndex = 9
+        Me.HippoBtn.UseVisualStyleBackColor = False
+        '
         'PenguinBtn
         '
-        Me.PenguinBtn.Location = New System.Drawing.Point(172, 105)
+        Me.PenguinBtn.BackColor = System.Drawing.Color.White
+        Me.PenguinBtn.BackgroundImage = CType(resources.GetObject("PenguinBtn.BackgroundImage"), System.Drawing.Image)
+        Me.PenguinBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PenguinBtn.Location = New System.Drawing.Point(118, 299)
         Me.PenguinBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.PenguinBtn.Name = "PenguinBtn"
-        Me.PenguinBtn.Size = New System.Drawing.Size(94, 75)
-        Me.PenguinBtn.TabIndex = 2
-        Me.PenguinBtn.Text = "Penguin"
-        Me.PenguinBtn.UseVisualStyleBackColor = True
+        Me.PenguinBtn.Size = New System.Drawing.Size(120, 68)
+        Me.PenguinBtn.TabIndex = 8
+        Me.PenguinBtn.UseVisualStyleBackColor = False
+        '
+        'CamelBtn
+        '
+        Me.CamelBtn.BackColor = System.Drawing.Color.White
+        Me.CamelBtn.BackgroundImage = CType(resources.GetObject("CamelBtn.BackgroundImage"), System.Drawing.Image)
+        Me.CamelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.CamelBtn.Location = New System.Drawing.Point(242, 155)
+        Me.CamelBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.CamelBtn.Name = "CamelBtn"
+        Me.CamelBtn.Size = New System.Drawing.Size(120, 68)
+        Me.CamelBtn.TabIndex = 7
+        Me.CamelBtn.UseVisualStyleBackColor = False
+        '
+        'BearBtn
+        '
+        Me.BearBtn.BackColor = System.Drawing.Color.White
+        Me.BearBtn.BackgroundImage = CType(resources.GetObject("BearBtn.BackgroundImage"), System.Drawing.Image)
+        Me.BearBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BearBtn.Location = New System.Drawing.Point(118, 155)
+        Me.BearBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.BearBtn.Name = "BearBtn"
+        Me.BearBtn.Size = New System.Drawing.Size(120, 68)
+        Me.BearBtn.TabIndex = 6
+        Me.BearBtn.UseVisualStyleBackColor = False
+        '
+        'GorillaBtn
+        '
+        Me.GorillaBtn.BackColor = System.Drawing.Color.White
+        Me.GorillaBtn.BackgroundImage = CType(resources.GetObject("GorillaBtn.BackgroundImage"), System.Drawing.Image)
+        Me.GorillaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.GorillaBtn.Location = New System.Drawing.Point(118, 227)
+        Me.GorillaBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.GorillaBtn.Name = "GorillaBtn"
+        Me.GorillaBtn.Size = New System.Drawing.Size(120, 68)
+        Me.GorillaBtn.TabIndex = 5
+        Me.GorillaBtn.UseVisualStyleBackColor = False
+        '
+        'LionBtn
+        '
+        Me.LionBtn.BackColor = System.Drawing.Color.White
+        Me.LionBtn.BackgroundImage = CType(resources.GetObject("LionBtn.BackgroundImage"), System.Drawing.Image)
+        Me.LionBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.LionBtn.Location = New System.Drawing.Point(366, 227)
+        Me.LionBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.LionBtn.Name = "LionBtn"
+        Me.LionBtn.Size = New System.Drawing.Size(120, 68)
+        Me.LionBtn.TabIndex = 4
+        Me.LionBtn.UseVisualStyleBackColor = False
         '
         'TigerBtn
         '
-        Me.TigerBtn.Location = New System.Drawing.Point(56, 107)
+        Me.TigerBtn.BackColor = System.Drawing.Color.White
+        Me.TigerBtn.BackgroundImage = CType(resources.GetObject("TigerBtn.BackgroundImage"), System.Drawing.Image)
+        Me.TigerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.TigerBtn.Location = New System.Drawing.Point(242, 299)
         Me.TigerBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.TigerBtn.Name = "TigerBtn"
-        Me.TigerBtn.Size = New System.Drawing.Size(89, 63)
+        Me.TigerBtn.Size = New System.Drawing.Size(120, 68)
         Me.TigerBtn.TabIndex = 1
-        Me.TigerBtn.Text = "Tiger"
-        Me.TigerBtn.UseVisualStyleBackColor = True
+        Me.TigerBtn.UseVisualStyleBackColor = False
         '
         'BotBackBtn
         '
@@ -184,23 +281,27 @@ Partial Class Form1
         '
         'SpectateBtn
         '
-        Me.SpectateBtn.Location = New System.Drawing.Point(334, 209)
+        Me.SpectateBtn.BackColor = System.Drawing.Color.White
+        Me.SpectateBtn.BackgroundImage = CType(resources.GetObject("SpectateBtn.BackgroundImage"), System.Drawing.Image)
+        Me.SpectateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.SpectateBtn.Location = New System.Drawing.Point(334, 181)
         Me.SpectateBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.SpectateBtn.Name = "SpectateBtn"
-        Me.SpectateBtn.Size = New System.Drawing.Size(135, 105)
+        Me.SpectateBtn.Size = New System.Drawing.Size(201, 173)
         Me.SpectateBtn.TabIndex = 1
-        Me.SpectateBtn.Text = "Spectate"
-        Me.SpectateBtn.UseVisualStyleBackColor = True
+        Me.SpectateBtn.UseVisualStyleBackColor = False
         '
         'QueueBtn
         '
-        Me.QueueBtn.Location = New System.Drawing.Point(94, 198)
+        Me.QueueBtn.BackColor = System.Drawing.Color.White
+        Me.QueueBtn.BackgroundImage = CType(resources.GetObject("QueueBtn.BackgroundImage"), System.Drawing.Image)
+        Me.QueueBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.QueueBtn.Location = New System.Drawing.Point(84, 181)
         Me.QueueBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.QueueBtn.Name = "QueueBtn"
-        Me.QueueBtn.Size = New System.Drawing.Size(130, 99)
+        Me.QueueBtn.Size = New System.Drawing.Size(199, 173)
         Me.QueueBtn.TabIndex = 0
-        Me.QueueBtn.Text = "Queue"
-        Me.QueueBtn.UseVisualStyleBackColor = True
+        Me.QueueBtn.UseVisualStyleBackColor = False
         '
         'QueueGrp
         '
@@ -211,14 +312,14 @@ Partial Class Form1
         Me.QueueGrp.Margin = New System.Windows.Forms.Padding(2)
         Me.QueueGrp.Name = "QueueGrp"
         Me.QueueGrp.Padding = New System.Windows.Forms.Padding(2)
-        Me.QueueGrp.Size = New System.Drawing.Size(148, 168)
+        Me.QueueGrp.Size = New System.Drawing.Size(148, 155)
         Me.QueueGrp.TabIndex = 3
         Me.QueueGrp.TabStop = False
         Me.QueueGrp.Visible = False
         '
         'QCancelBtn
         '
-        Me.QCancelBtn.Location = New System.Drawing.Point(82, 135)
+        Me.QCancelBtn.Location = New System.Drawing.Point(82, 125)
         Me.QCancelBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.QCancelBtn.Name = "QCancelBtn"
         Me.QCancelBtn.Size = New System.Drawing.Size(54, 21)
@@ -228,7 +329,7 @@ Partial Class Form1
         '
         'QAcceptBtn
         '
-        Me.QAcceptBtn.Location = New System.Drawing.Point(8, 135)
+        Me.QAcceptBtn.Location = New System.Drawing.Point(8, 125)
         Me.QAcceptBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.QAcceptBtn.Name = "QAcceptBtn"
         Me.QAcceptBtn.Size = New System.Drawing.Size(62, 24)
@@ -271,13 +372,12 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(632, 513)
-        Me.Controls.Add(Me.InfoBtn)
         Me.Controls.Add(Me.QueueGrp)
-        Me.Controls.Add(Me.MainPnl)
+        Me.Controls.Add(Me.QueuePnl)
         Me.Controls.Add(Me.CameraPnl)
+        Me.Controls.Add(Me.MainPnl)
         Me.Controls.Add(Me.InfoPnl)
         Me.Controls.Add(Me.BotPnl)
-        Me.Controls.Add(Me.QueuePnl)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximumSize = New System.Drawing.Size(648, 551)
         Me.MinimumSize = New System.Drawing.Size(648, 551)
@@ -311,9 +411,16 @@ Partial Class Form1
     Friend WithEvents QAcceptBtn As Button
     Friend WithEvents QueueLbl As Label
     Friend WithEvents BotBackBtn As Button
-    Friend WithEvents PenguinBtn As Button
     Friend WithEvents TigerBtn As Button
     Friend WithEvents QueueBackBtn As Button
+    Friend WithEvents ElephantBtn As Button
+    Friend WithEvents ZebraBtn As Button
+    Friend WithEvents HippoBtn As Button
+    Friend WithEvents PenguinBtn As Button
+    Friend WithEvents CamelBtn As Button
+    Friend WithEvents BearBtn As Button
+    Friend WithEvents GorillaBtn As Button
+    Friend WithEvents LionBtn As Button
     Friend WithEvents CameraPnl As Panel
     Friend WithEvents CameraImg As PictureBox
 End Class
