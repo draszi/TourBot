@@ -24,7 +24,6 @@ Partial Class Main
     Private Sub InitializeComponent()
         Me.MainPnl = New System.Windows.Forms.Panel()
         Me.BotBtn = New System.Windows.Forms.Button()
-        Me.InfoBtn = New System.Windows.Forms.Button()
         Me.InfoPnl = New System.Windows.Forms.Panel()
         Me.InfoBackBtn = New System.Windows.Forms.Button()
         Me.InfoLbl = New System.Windows.Forms.Label()
@@ -41,7 +40,13 @@ Partial Class Main
         Me.QAcceptBtn = New System.Windows.Forms.Button()
         Me.QueueLbl = New System.Windows.Forms.Label()
         Me.CameraPnl = New System.Windows.Forms.Panel()
+        Me.UpBtn = New System.Windows.Forms.Button()
+        Me.LeftBtn = New System.Windows.Forms.Button()
+        Me.DownBtn = New System.Windows.Forms.Button()
+        Me.RightBtn = New System.Windows.Forms.Button()
+        Me.InfoBtn = New System.Windows.Forms.Button()
         Me.CameraImg = New System.Windows.Forms.PictureBox()
+        Me.CameraPnlBack = New System.Windows.Forms.Button()
         Me.MainPnl.SuspendLayout()
         Me.InfoPnl.SuspendLayout()
         Me.BotPnl.SuspendLayout()
@@ -63,30 +68,13 @@ Partial Class Main
         'BotBtn
         '
         Me.BotBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BotBtn.Location = New System.Drawing.Point(135, 174)
+        Me.BotBtn.Location = New System.Drawing.Point(152, 153)
         Me.BotBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.BotBtn.Name = "BotBtn"
         Me.BotBtn.Size = New System.Drawing.Size(310, 176)
         Me.BotBtn.TabIndex = 1
         Me.BotBtn.Text = "See Bots"
         Me.BotBtn.UseVisualStyleBackColor = True
-        '
-        'InfoBtn
-        '
-        Me.InfoBtn.BackColor = System.Drawing.Color.Transparent
-        Me.InfoBtn.BackgroundImage = Global.TourBot.My.Resources.Resources._1828608
-        Me.InfoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.InfoBtn.FlatAppearance.BorderSize = 0
-        Me.InfoBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.InfoBtn.ForeColor = System.Drawing.Color.Black
-        Me.InfoBtn.Location = New System.Drawing.Point(486, 321)
-        Me.InfoBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.InfoBtn.Name = "InfoBtn"
-        Me.InfoBtn.Size = New System.Drawing.Size(130, 162)
-        Me.InfoBtn.TabIndex = 0
-        Me.InfoBtn.Text = "Need help?"
-        Me.InfoBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.InfoBtn.UseVisualStyleBackColor = False
         '
         'InfoPnl
         '
@@ -95,7 +83,7 @@ Partial Class Main
         Me.InfoPnl.Location = New System.Drawing.Point(6, 6)
         Me.InfoPnl.Margin = New System.Windows.Forms.Padding(2)
         Me.InfoPnl.Name = "InfoPnl"
-        Me.InfoPnl.Size = New System.Drawing.Size(615, 483)
+        Me.InfoPnl.Size = New System.Drawing.Size(613, 483)
         Me.InfoPnl.TabIndex = 0
         Me.InfoPnl.Visible = False
         '
@@ -207,7 +195,7 @@ Partial Class Main
         Me.QueueGrp.Controls.Add(Me.QCancelBtn)
         Me.QueueGrp.Controls.Add(Me.QAcceptBtn)
         Me.QueueGrp.Controls.Add(Me.QueueLbl)
-        Me.QueueGrp.Location = New System.Drawing.Point(476, 2)
+        Me.QueueGrp.Location = New System.Drawing.Point(1112, 3)
         Me.QueueGrp.Margin = New System.Windows.Forms.Padding(2)
         Me.QueueGrp.Name = "QueueGrp"
         Me.QueueGrp.Padding = New System.Windows.Forms.Padding(2)
@@ -248,39 +236,108 @@ Partial Class Main
         '
         'CameraPnl
         '
+        Me.CameraPnl.Controls.Add(Me.CameraPnlBack)
+        Me.CameraPnl.Controls.Add(Me.UpBtn)
+        Me.CameraPnl.Controls.Add(Me.LeftBtn)
+        Me.CameraPnl.Controls.Add(Me.DownBtn)
+        Me.CameraPnl.Controls.Add(Me.RightBtn)
         Me.CameraPnl.Controls.Add(Me.CameraImg)
         Me.CameraPnl.Location = New System.Drawing.Point(6, 6)
         Me.CameraPnl.Margin = New System.Windows.Forms.Padding(2)
         Me.CameraPnl.Name = "CameraPnl"
-        Me.CameraPnl.Size = New System.Drawing.Size(616, 483)
+        Me.CameraPnl.Size = New System.Drawing.Size(613, 483)
         Me.CameraPnl.TabIndex = 4
         Me.CameraPnl.Visible = False
         '
+        'UpBtn
+        '
+        Me.UpBtn.Location = New System.Drawing.Point(272, 347)
+        Me.UpBtn.Name = "UpBtn"
+        Me.UpBtn.Size = New System.Drawing.Size(93, 46)
+        Me.UpBtn.TabIndex = 4
+        Me.UpBtn.Text = "Up"
+        Me.UpBtn.UseVisualStyleBackColor = True
+        '
+        'LeftBtn
+        '
+        Me.LeftBtn.Location = New System.Drawing.Point(166, 399)
+        Me.LeftBtn.Name = "LeftBtn"
+        Me.LeftBtn.Size = New System.Drawing.Size(100, 51)
+        Me.LeftBtn.TabIndex = 3
+        Me.LeftBtn.Text = "Left"
+        Me.LeftBtn.UseVisualStyleBackColor = True
+        '
+        'DownBtn
+        '
+        Me.DownBtn.Location = New System.Drawing.Point(272, 399)
+        Me.DownBtn.Name = "DownBtn"
+        Me.DownBtn.Size = New System.Drawing.Size(102, 58)
+        Me.DownBtn.TabIndex = 2
+        Me.DownBtn.Text = "Down"
+        Me.DownBtn.UseVisualStyleBackColor = True
+        '
+        'RightBtn
+        '
+        Me.RightBtn.Location = New System.Drawing.Point(380, 403)
+        Me.RightBtn.Name = "RightBtn"
+        Me.RightBtn.Size = New System.Drawing.Size(122, 51)
+        Me.RightBtn.TabIndex = 1
+        Me.RightBtn.Text = "Right"
+        Me.RightBtn.UseVisualStyleBackColor = True
+        '
+        'InfoBtn
+        '
+        Me.InfoBtn.BackColor = System.Drawing.Color.Transparent
+        Me.InfoBtn.BackgroundImage = Global.TourBot.My.Resources.Resources._1828608
+        Me.InfoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.InfoBtn.FlatAppearance.BorderSize = 0
+        Me.InfoBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InfoBtn.ForeColor = System.Drawing.Color.Black
+        Me.InfoBtn.Location = New System.Drawing.Point(1134, 824)
+        Me.InfoBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.InfoBtn.Name = "InfoBtn"
+        Me.InfoBtn.Size = New System.Drawing.Size(130, 162)
+        Me.InfoBtn.TabIndex = 0
+        Me.InfoBtn.Text = "Need help?"
+        Me.InfoBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.InfoBtn.UseVisualStyleBackColor = False
+        '
         'CameraImg
         '
+        Me.CameraImg.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.CameraImg.Image = Global.TourBot.My.Resources.Resources.cat
         Me.CameraImg.ImageLocation = ""
-        Me.CameraImg.Location = New System.Drawing.Point(2, 2)
+        Me.CameraImg.Location = New System.Drawing.Point(0, 2)
         Me.CameraImg.Margin = New System.Windows.Forms.Padding(2)
         Me.CameraImg.Name = "CameraImg"
-        Me.CameraImg.Size = New System.Drawing.Size(614, 480)
+        Me.CameraImg.Size = New System.Drawing.Size(5000, 5000)
         Me.CameraImg.TabIndex = 0
         Me.CameraImg.TabStop = False
+        '
+        'CameraPnlBack
+        '
+        Me.CameraPnlBack.Location = New System.Drawing.Point(10, 10)
+        Me.CameraPnlBack.Name = "CameraPnlBack"
+        Me.CameraPnlBack.Size = New System.Drawing.Size(75, 23)
+        Me.CameraPnlBack.TabIndex = 5
+        Me.CameraPnlBack.Text = "Back"
+        Me.CameraPnlBack.UseVisualStyleBackColor = True
         '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(632, 513)
+        Me.ClientSize = New System.Drawing.Size(1264, 986)
         Me.Controls.Add(Me.InfoBtn)
         Me.Controls.Add(Me.QueueGrp)
-        Me.Controls.Add(Me.QueuePnl)
         Me.Controls.Add(Me.MainPnl)
         Me.Controls.Add(Me.CameraPnl)
         Me.Controls.Add(Me.InfoPnl)
         Me.Controls.Add(Me.BotPnl)
+        Me.Controls.Add(Me.QueuePnl)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MaximumSize = New System.Drawing.Size(648, 551)
-        Me.MinimumSize = New System.Drawing.Size(648, 551)
+        Me.MaximumSize = New System.Drawing.Size(1280, 1024)
+        Me.MinimumSize = New System.Drawing.Size(1280, 1024)
         Me.Name = "Main"
         Me.Text = "TourBot"
         Me.MainPnl.ResumeLayout(False)
@@ -316,4 +373,9 @@ Partial Class Main
     Friend WithEvents QueueBackBtn As Button
     Friend WithEvents CameraPnl As Panel
     Friend WithEvents CameraImg As PictureBox
+    Friend WithEvents UpBtn As Button
+    Friend WithEvents LeftBtn As Button
+    Friend WithEvents DownBtn As Button
+    Friend WithEvents RightBtn As Button
+    Friend WithEvents CameraPnlBack As Button
 End Class
